@@ -1,0 +1,147 @@
+package com.company;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+
+public class Main {
+
+    static void printSort(ArrayList<Continent> con){
+        for(int i=0;i<con.size();i++)
+            System.out.println(con.get(i));
+    }
+    public static void main(String[] args) {
+
+        //1
+        /*
+        LocalDateTime myDate = LocalDateTime.of(1992,12,15, 15,1);
+        DateTimeFormatter form = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        System.out.println(myDate.format(form));
+         */
+
+        //2
+        //Comparable מספק רצף מיון יחיד. במילים אחרות, אנו יכולים למיין את האוסף על בסיס אלמנט יחיד כגון מזהה, שם ומחיר.
+        // Comparator מספק רצפי מיון מרובים. במילים אחרות, אנו יכולים למיין את האוסף על בסיס מספר אלמנטים כגון מזהה, שם ומחיר וכו.
+        //נשתמש ב-comparable כשנרצה להשפיע על המחלקה עצמה. נשתמש ב-comparator כשלא נרצה להשפיע על המחלקה עצמה.
+
+        //3+4
+        /*
+        ArrayList<Continent>con=new ArrayList<>();
+      con.add(new Continent("ASIA",8.5,1000));
+        con.add(new Continent("AFRICA",3.6,10000));
+        con.add(new Continent("AMRICA",3.7,100000));
+
+        Collections.sort(con,new ContinentCompareBySize());
+        printSort(con);
+        Collections.sort(con,new ContinentCompareByPopulation());
+        printSort(con);
+ Collections.sort(con);
+        printSort(con)
+         */
+
+        //6.1
+        // java. lang. Object
+
+        //6.2
+        /*
+        public Object()
+        public final Class getClass()
+        public int hashCode()
+        public boolean equals(Object obj)
+        public String toString()
+         */
+
+        //7
+        // Set, HashMap, Stack, Queue.
+
+        //8.1
+        // Generics.
+
+        //8.2
+        // לא.
+
+        //9
+        // פרימיטיבים מועברים לפי ערך, כלומר עותק של הפרימיטיבי עצמו מועבר. ואילו לגבי אובייקטים, העתק ההפניה מועבר, ולא האובייקט עצמו. פרימיטיבים הם סוגי נתונים עצמאיים, כלומר אין להם היררכיה / מעמד. ואילו כל אובייקט הוא צאצא למחלקה "אובייקט" .
+
+        //10
+        // מחסנית- מי שנכנס ראשון יוצא אחרון.
+        // תור- מי שנכנס ראשון יוצא ראשון.
+
+        //11.1 + 11.2 + 11.3
+        /*
+        Stack<String> numbersStack = new Stack<>();
+        numbersStack.push("cola");
+        numbersStack.push("pepsi");
+        numbersStack.push("fanta");
+        numbersStack.pop();
+        System.out.println(numbersStack.pop());
+        System.out.println(numbersStack.peek());
+         */
+
+        //11.4
+        // ההבדל בינהם הוא ש-peek רק מראה מה הפריט הבא בלי להוציא אותו.
+
+        //12.1 + 12.2 + 12.3 + 12.4
+        /*
+        Queue<Double> queue = new ArrayDeque<>();
+        queue.add(7.7);
+        queue.add(8.8);
+        queue.add(9.9);
+        queue.poll();
+        System.out.println(queue.peek());
+        queue.removeAll(queue);
+         */
+
+        //14
+        //Set אינו מאפשר איברים כפולים.
+
+        //15
+        //מאפשר לנו לאחסן צמד מפתחות וערכים, כאשר המפתחות צריכים להיות ייחודיים. אם תנסה להכניס את המפתח הכפול, הוא יחליף את האלמנט של המפתח המתאים.
+
+
+        //17
+        //כדאי להשתמש בהם בגלל שניתן לחזור ולהשתמש בהם באותו קוד בתשומות שונות.
+
+        //19
+        // exeptions הם בעצם "תןפסים" שגיאות בקוד. כלומר, אם למשל אנחנו מבקשים מהלקוח להכניס את שמו והוא מחכניס מספר אז התוכנית תקרוס.
+
+        //20
+        // ניתן למנוע מהתוכנית לקרוס באמצעות try ן-catch.
+
+        //21
+        /*
+        try {
+            System.out.println(5 / 0);
+        }
+        catch (Exception e){
+            System.out.println("Opps, you divided by 0.");
+        }
+        */
+
+        //22
+        // זה אמצעי המשמש לאחסון מסודר של נתונים במחשב, לשם אחזורם ועיבודם.
+
+        //23+24
+        /*
+        CREATE TABLE Products(
+                Id INT PRIMARY KEY NOT NULL,
+                Name TEXT NOT NULL,
+                Price REAL NOT NULL);
+
+        INSERT INTO Products (Id,Name,Price)
+        VALUES (1, 'Cola', 7.5);
+        INSERT INTO Products (Id,Name,Price)
+        VALUES (2, 'Pepsi', 5.8);
+
+        DELETE FROM Products
+        WHERE Id = 1;
+
+        UPDATE Products
+        SET Price = 4.9
+        WHERE ID = 2;
+        */
+
+    }
+
+}
