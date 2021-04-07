@@ -1,0 +1,39 @@
+package com.company;
+import java.lang.Integer;
+public class Continent implements Comparable<Continent> {
+    protected String name;
+    protected double size;
+    protected int population;
+
+    public Continent(String name, double size, int population) {
+        this.name = name;
+        this.size = size;
+        this.population = population;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getSize() {
+        return size;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+
+    @Override
+    public String toString() {
+        return "Continent{" +
+                "name='" + name + '\'' +
+                ", size=" + size +
+                ", population=" + population +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Continent o) {
+        return this.name.compareTo(o.name);
+    }
+}
